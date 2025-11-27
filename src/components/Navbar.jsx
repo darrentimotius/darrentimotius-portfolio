@@ -9,7 +9,7 @@ function Navbar() {
             <div className={`px-8 py-10 w-[340px] hidden md:flex flex-col gap-6 fixed top-0 left-0 bottom-0`}>
                 <div className='flex justify-between items-center'>
                     <a href='/'>
-                        <img src="/photos/me-navbar.jpg" className='rounded-full w-12 h-12'/>
+                        <img src="/photos/me-navbar.jpg" className='rounded-full w-12 h-12' decoding='async' loading='eager'/>
                     </a>
                 </div>
 

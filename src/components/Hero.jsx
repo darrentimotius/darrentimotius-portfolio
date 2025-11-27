@@ -8,14 +8,17 @@ const Hero = () => {
         hidden: { 
             opacity: 0
         },
-        show: (i) => ({
+        show: (delay) => ({
             opacity: 1,
             transition: {
                 duration: 0.4,
-                delay: Math.random() * 0.5
+                delay: delay
             }
         })
     };
+    const [loadedImages, setLoadedImages] = useState(0);
+    const totalImages = 2; // jumlah card kamu
+    const allLoaded = loadedImages === totalImages;
 
     return (
         <div className='ml-0 md:ml-[340px] pl-8 pr-8 md:pl-0 relative flex-1 grow-0 pb-8 md:pb-14'>
@@ -60,19 +63,30 @@ const Hero = () => {
                                     ? 'flex flex-col max-w-2xl' 
                                     : 'flex flex-col lg:gap-y-6 lg:grid lg:grid-cols-2 3xl:grid-cols-4'
                             }`}
+                            initial='hidden'
+                            animate={allLoaded ? 'show' : 'hidden'}
+                            variants={{
+                                hidden: {},
+                                show: {
+                                    transition: { staggerChildren : 0.15 }
+                                }
+                            }}
                         >
                             <Card
                                 layoutId='card-1'
                                 itemVariants={itemVariant}
+                                onImageLoad={() => setLoadedImages(c => c + 1)}
                                 isOpen={isOpen}
                                 image='/photos/sentika/sentika-card.jpg'
                                 title='Sentika'
                                 description='Real‑time Indonesian Sentiment Analysis powered by IndoBERT, FastAPI, and Next.js'
                                 date='September 23, 2025'
+                                
                             />
                             <Card
                                 layoutId='card-2'
                                 itemVariants={itemVariant}
+                                onImageLoad={() => setLoadedImages(c => c + 1)}
                                 isOpen={isOpen}
                                 image='/photos/palorant/palorant-card.jpg'
                                 title='PALORANT'
