@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 
-const Card = ({ layoutId, isOpen, image, title, href, description, date }) => {
+const Card = ({ layoutId, itemVariants, isOpen, image, title, href, description, date }) => {
     return (
-        <motion.div layoutId={layoutId} className='w-full flex flex-col lg:flex-row lg:items-end gap-2 lg:gap-4 cursor-pointer'>
+        <motion.div layoutId={layoutId} className='w-full flex flex-col lg:flex-row lg:items-end gap-2 lg:gap-4 cursor-pointer' variants={itemVariants} initial='hidden' animate='show' custom={layoutId}>
             <a className='cursor-pointer h-full overflow-hidden relative group w-full flex flex-col gap-2' href={href}>
                 <div className='w-full relative overflow-hidden rounded-lg'>
                     <img src={image} alt={title} className='w-full h-full object-cover group-hover:scale-105' loading='eager'/>

@@ -4,6 +4,18 @@ import Card from './Card'
 
 const Hero = () => {
     const [isOpen, setIsOpen] = useState(false)
+    const itemVariant = {
+        hidden: { 
+            opacity: 0
+        },
+        show: (i) => ({
+            opacity: 1,
+            transition: {
+                duration: 0.4,
+                delay: Math.random() * 0.5
+            }
+        })
+    };
 
     return (
         <div className='ml-0 md:ml-[340px] pl-8 pr-8 md:pl-0 relative flex-1 grow-0 pb-8 md:pb-14'>
@@ -51,6 +63,7 @@ const Hero = () => {
                         >
                             <Card
                                 layoutId='card-1'
+                                itemVariants={itemVariant}
                                 isOpen={isOpen}
                                 image='/photos/sentika/sentika-card.jpg'
                                 title='Sentika'
@@ -59,6 +72,7 @@ const Hero = () => {
                             />
                             <Card
                                 layoutId='card-2'
+                                itemVariants={itemVariant}
                                 isOpen={isOpen}
                                 image='/photos/palorant/palorant-card.jpg'
                                 title='PALORANT'
