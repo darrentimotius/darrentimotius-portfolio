@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import React, { useMemo} from 'react'
+import React, { useMemo } from 'react'
 
 const Card = ({ layoutId,itemVariants, onImageLoad, isOpen, image, title, href, description, date }) => {
     const randomDelay = useMemo(() => Math.random() * 0.6, []);
