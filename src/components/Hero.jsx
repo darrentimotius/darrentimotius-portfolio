@@ -79,9 +79,9 @@ const Hero = () => {
                                 isOpen={isOpen}
                                 image='/photos/sentika/sentika-card.jpg'
                                 title='Sentika'
+                                href='/projects/sentika'
                                 description='Real‑time Indonesian Sentiment Analysis powered by IndoBERT, FastAPI, and Next.js'
                                 date='September 23, 2025'
-                                
                             />
                             <Card
                                 layoutId='card-2'
@@ -90,6 +90,7 @@ const Hero = () => {
                                 isOpen={isOpen}
                                 image='/photos/palorant/palorant-card.jpg'
                                 title='PALORANT'
+                                href='/projects/palorant'
                                 description='Simple, responsive website built with vanilla HTML, CSS, and JavaScript.'
                                 date='April 18, 2025'
                             />

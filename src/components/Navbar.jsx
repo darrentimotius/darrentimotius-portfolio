@@ -60,7 +60,7 @@ function Navbar() {
                         </li>
                         <li className='flex cursor-pointer'>
                             <a target='_blank' rel='noopener noreferrer' href="https://www.linkedin.com/in/darrentimotius/">
-                                ↗ Linkedin
+                                ↗ LinkedIn
                             </a>
                         </li>
                     </ul>
@@ -71,6 +71,7 @@ function Navbar() {
                     </span>
                 </div>
             </div>
+
             <header className='fixed top-8 left-6 right-6 z-10 flex flex-row gap-2'>
                 <div className='w-full flex flex-col md:hidden p-2 bg-white/70 backdrop-blur-md rounded-3xl border border-gray-200'>
                     <div className='flex flex-row items-center'>
@@ -88,6 +89,7 @@ function Navbar() {
                             </svg>
                         </button>
                     </div>
+
                     <div className={`flex-col py-4 gap-4 overflow-y-auto ${isOpen ? 'flex' : 'hidden'}`}>
                         <div className='text-gray-900 tracking-tight'>
                             <h3 className='text-sm'>
@@ -125,17 +127,13 @@ function Navbar() {
                                     ↗ Github
                                 </a>
                                 <a className='p-0 m-0 w-fit block' target='_blank' rel='noopener noreferrer' href="https://www.linkedin.com/in/darrentimotius/">
-                                    ↗ Linkedin
+                                    ↗ LinkedIn
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </header>
-
-            <div className='min-h-screen flex flex-col'>
-                <Hero/>
-            </div>
         </div>
     )
 }
