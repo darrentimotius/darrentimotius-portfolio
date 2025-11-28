@@ -17,7 +17,7 @@ const Hero = () => {
         })
     };
     const [loadedImages, setLoadedImages] = useState(0);
-    const totalImages = 4;
+    const totalImages = 2;
     const allLoaded = loadedImages === totalImages;
 
     return (
@@ -85,26 +85,6 @@ const Hero = () => {
                             />
                             <Card
                                 layoutId='card-2'
-                                itemVariants={itemVariant}
-                                onImageLoad={() => setLoadedImages(c => c + 1)}
-                                isOpen={isOpen}
-                                image='/photos/palorant/palorant-card.jpg'
-                                title='PALORANT'
-                                description='Simple, responsive website built with vanilla HTML, CSS, and JavaScript.'
-                                date='April 18, 2025'
-                            />
-                            <Card
-                                layoutId='card-3'
-                                itemVariants={itemVariant}
-                                onImageLoad={() => setLoadedImages(c => c + 1)}
-                                isOpen={isOpen}
-                                image='/photos/palorant/palorant-card.jpg'
-                                title='PALORANT'
-                                description='Simple, responsive website built with vanilla HTML, CSS, and JavaScript.'
-                                date='April 18, 2025'
-                            />
-                            <Card
-                                layoutId='card-4'
                                 itemVariants={itemVariant}
                                 onImageLoad={() => setLoadedImages(c => c + 1)}
                                 isOpen={isOpen}
