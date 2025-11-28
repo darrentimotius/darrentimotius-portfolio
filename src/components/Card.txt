@@ -1,30 +1,26 @@
-import { AnimatePresence, motion } from 'framer-motion'
-import { desc, div } from 'framer-motion/client';
+import { motion } from 'framer-motion'
 import React, { useMemo } from 'react'
 
 const Card = ({ layoutId,itemVariants, onImageLoad, isOpen, image, title, href, description, date }) => {
     const randomDelay = useMemo(() => Math.random() * 0.6, []);
     return (
-        <div className={`w-full flex flex-col lg:items-end gap-2 lg:gap-4 ${isOpen ? 'lg:flex-row' : ''} `} >
-            <motion.div layoutId={layoutId} variants={itemVariants} custom={randomDelay} className={`flex flex-col gap-2 ${isOpen ? 'lg:w-auto' : ''} `}>
-                <a className={`cursor-pointer w-full h-auto overflow-hidden relative group rounded-lg ${isOpen ? '' : ''}`} href={href}>
-                    <img src={image} alt="" className='w-full h-full object-cover relative overflow-hidden group-hover:scale-105' decoding='async' loading='eager' onLoad={onImageLoad}/>
-                </a>
-            </motion.div>
-            <AnimatePresence mode='wait'>
-                {!isOpen && (
-                    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 0.7, duration: 1, ease: [0, 0.71, 0.2, 1.01]}} className={`text-gray-900  w-full flex-col lg:flex`}>
-                        <h3 className='text-sm'>
-                            {title}
-                        </h3>
-                        <p className='text-xs'>
-                            {description}
-                        </p>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+        <motion.div layoutId={layoutId} className='w-full flex flex-col lg:flex-row lg:items-end gap-2 lg:gap-4 cursor-pointer' variants={itemVariants} custom={randomDelay}>
+            <a className='cursor-pointer h-full overflow-hidden relative group w-full flex flex-col gap-2' href={href}>
+                <div className={`w-full relative overflow-hidden rounded-lg`}>
+                    <img src={image} alt={title} className='w-full h-full object-cover group-hover:scale-105' decoding='async' loading='eager' onLoad={onImageLoad}/>
+                </div>
 
-            <div className={`w-full mb-4 flex flex-col-reverse lg:flex-col gap-2 lg:gap-4  ${isOpen ? '' : 'lg:hidden'}`}>
+                <div className={`hidden lg:flex ${isOpen ? 'lg:hidden' : ''} text-gray-900 flex-col`}>
+                    <h3 className='text-sm'>
+                        {title}
+                    </h3>
+                    <p className='text-xs'>
+                        {description}
+                    </p>
+                </div>
+            </a>
+
+            <div className={`w-full lg:w-1/2 mb-4 flex flex-col-reverse lg:flex-col gap-2 lg:gap-4 ${isOpen ? '' : 'lg:hidden'}`}>
                 <div className='flex-1 w-full'>
                     <h3 className='p-0 m-0 text-gray-900 text-sm lg:w-3/4 xl:w-full'>
                         {title}
@@ -47,8 +43,7 @@ const Card = ({ layoutId,itemVariants, onImageLoad, isOpen, image, title, href, 
                     </li>
                 </ul>
             </div>
-
-        </div>
+        </motion.div>
     )
 }
 

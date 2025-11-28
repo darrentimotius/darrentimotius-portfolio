@@ -17,7 +17,7 @@ const Hero = () => {
         })
     };
     const [loadedImages, setLoadedImages] = useState(0);
-    const totalImages = 2; // jumlah card kamu
+    const totalImages = 4;
     const allLoaded = loadedImages === totalImages;
 
     return (
@@ -60,7 +60,7 @@ const Hero = () => {
                         <motion.div
                             className={`gap-2 gap-y-6 lg:gap-2 ${
                                 isOpen 
-                                    ? 'flex flex-col max-w-2xl' 
+                                    ? 'flex flex-col max-w-3xl' 
                                     : 'flex flex-col lg:gap-y-6 lg:grid lg:grid-cols-2 3xl:grid-cols-4'
                             }`}
                             initial='hidden'
@@ -71,7 +71,7 @@ const Hero = () => {
                                     transition: { staggerChildren : 0.15 }
                                 }
                             }}
-                        >
+                            >
                             <Card
                                 layoutId='card-1'
                                 itemVariants={itemVariant}
@@ -85,6 +85,26 @@ const Hero = () => {
                             />
                             <Card
                                 layoutId='card-2'
+                                itemVariants={itemVariant}
+                                onImageLoad={() => setLoadedImages(c => c + 1)}
+                                isOpen={isOpen}
+                                image='/photos/palorant/palorant-card.jpg'
+                                title='PALORANT'
+                                description='Simple, responsive website built with vanilla HTML, CSS, and JavaScript.'
+                                date='April 18, 2025'
+                            />
+                            <Card
+                                layoutId='card-3'
+                                itemVariants={itemVariant}
+                                onImageLoad={() => setLoadedImages(c => c + 1)}
+                                isOpen={isOpen}
+                                image='/photos/palorant/palorant-card.jpg'
+                                title='PALORANT'
+                                description='Simple, responsive website built with vanilla HTML, CSS, and JavaScript.'
+                                date='April 18, 2025'
+                            />
+                            <Card
+                                layoutId='card-4'
                                 itemVariants={itemVariant}
                                 onImageLoad={() => setLoadedImages(c => c + 1)}
                                 isOpen={isOpen}
