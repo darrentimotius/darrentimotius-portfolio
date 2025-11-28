@@ -3,8 +3,8 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import ProjectsMain from './pages/projects/ProjectsMain'
 import About from './pages/About'
-import Palorant from './pages/Projects/Palorant'
-import Sentika from './pages/Projects/Sentika'
+import Palorant from './pages/projects/Palorant'
+import Sentika from './pages/projects/Sentika'
 
 const App = () => {
     return (
