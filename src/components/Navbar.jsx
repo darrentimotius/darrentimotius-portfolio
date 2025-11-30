@@ -13,7 +13,7 @@ function Navbar() {
                     </a>
                 </div>
 
-                <div className='text-gray-900 tracking-tight'>
+                <div className='text-gray-900'>
                     <h3 className='text-sm'>
                         Darren Timotius
                     </h3>
@@ -22,11 +22,11 @@ function Navbar() {
                     </p>
                 </div>
 
-                <h3 className='text-gray-900 tracking-tight text-xs'>
+                <h3 className='text-gray-900 text-xs'>
                     CS Student, BINUS
                 </h3>
 
-                <nav className='text-gray-900 tracking-tight text-xs'>
+                <nav className='text-gray-900 text-xs'>
                     <ul>
                         <li className='flex cursor-pointer'>
                             <a href="/projects">
@@ -91,7 +91,7 @@ function Navbar() {
                     </div>
 
                     <div className={`flex-col py-4 gap-4 overflow-y-auto ${isOpen ? 'flex' : 'hidden'}`}>
-                        <div className='text-gray-900 tracking-tight'>
+                        <div className='text-gray-900'>
                             <h3 className='text-sm'>
                                 Darren Timotius
                             </h3>
@@ -100,11 +100,11 @@ function Navbar() {
                             </p>
                         </div>
 
-                        <h3 className='text-gray-900 tracking-tight text-xs'>
+                        <h3 className='text-gray-900 text-xs'>
                             CS Student, BINUS
                         </h3>
 
-                        <div className='grid grid-cols-2 md:grid-cols-1 text-gray-900 tracking-tight text-xs'>
+                        <div className='grid grid-cols-2 md:grid-cols-1 text-gray-900 text-xs'>
                             <div>
                                 <a className='p-0 m-0 w-fit block' href="/projects">
                                     → Projects
