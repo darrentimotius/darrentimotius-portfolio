@@ -17,7 +17,7 @@ const Hero = () => {
         })
     };
     const [loadedImages, setLoadedImages] = useState(0);
-    const totalImages = 2;
+    const totalImages = 3;
     const allLoaded = loadedImages === totalImages;
 
     return (
@@ -85,6 +85,17 @@ const Hero = () => {
                             />
                             <Card
                                 layoutId='card-2'
+                                itemVariants={itemVariant}
+                                onImageLoad={() => setLoadedImages(c => c + 1)}
+                                isOpen={isOpen}
+                                image='/photos/dana/dana-card.jpg'
+                                title='DANA'
+                                href='/projects/dana'
+                                description='Redesigning DANA App for  enhancing User Experience and Interface.'
+                                date='May 10, 2025'
+                            />
+                            <Card
+                                layoutId='card-3'
                                 itemVariants={itemVariant}
                                 onImageLoad={() => setLoadedImages(c => c + 1)}
                                 isOpen={isOpen}

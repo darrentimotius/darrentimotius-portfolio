@@ -5,6 +5,7 @@ import ProjectsMain from './pages/projects/ProjectsMain'
 import About from './pages/About'
 import Palorant from './pages/projects/Palorant'
 import Sentika from './pages/projects/Sentika'
+import Dana from './pages/projects/Dana'
 
 const App = () => {
     return (
@@ -15,6 +16,7 @@ const App = () => {
                 <Route path='/projects' element={<ProjectsMain/>}/>
                 <Route path='/projects/palorant' element={<Palorant/>} />
                 <Route path='/projects/sentika' element={<Sentika/>}/>
+                <Route path='/projects/dana' element={<Dana/>}/>
             </Routes>
         </Router>
     )
