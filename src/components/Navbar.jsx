@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Hero from './Hero'
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
@@ -14,7 +13,7 @@ function Navbar() {
                 </div>
 
                 <div className='text-gray-900'>
-                    <h3 className='text-sm'>
+                    <h3 className='text-xs'>
                         Darren Timotius
                     </h3>
                     <p className='text-xs'>
@@ -27,40 +26,35 @@ function Navbar() {
                 </h3>
 
                 <nav className='text-gray-900 text-xs'>
-                    <ul>
+                    <ul className='flex flex-col gap-0.5'>
                         <li className='flex cursor-pointer'>
                             <a href="/projects">
-                                → Projects
+                                <span style={{fontFamily: 'system-ui'}}>→</span> Projects
                             </a>
                         </li>
                         <li className='flex cursor-pointer'>
                             <a href="/about">
-                                → About me
-                            </a>
-                        </li>
-                        <li className='flex cursor-pointer'>
-                            <a href="/now">
-                                → Now
+                                <span style={{fontFamily: 'system-ui'}}>→</span> About me
                             </a>
                         </li>
                         <li className='flex cursor-pointer'>
                             <a href="mailto:me@darrentimotius.me">
-                                → Contact
+                                <span style={{fontFamily: 'system-ui'}}>→</span> Contact
                             </a>
                         </li>
                         <li className='flex cursor-pointer'>
                             <a target='_blank' rel='noopener noreferrer' href="https://www.instagram.com/darrentimotius">
-                                ↗ Instagram
+                                <span style={{fontFamily: 'system-ui'}}>↗</span> Instagram
                             </a>
                         </li>
                         <li className='flex cursor-pointer'>
                             <a target='_blank' rel='noopener noreferrer' href="https://github.com/darrentimotius">
-                                ↗ Github
+                                <span style={{fontFamily: 'system-ui'}}>↗</span> Github
                             </a>
                         </li>
                         <li className='flex cursor-pointer'>
                             <a target='_blank' rel='noopener noreferrer' href="https://www.linkedin.com/in/darrentimotius/">
-                                ↗ LinkedIn
+                                <span style={{fontFamily: 'system-ui'}}>↗</span> LinkedIn
                             </a>
                         </li>
                     </ul>
@@ -92,7 +86,7 @@ function Navbar() {
 
                     <div className={`flex-col py-4 gap-4 overflow-y-auto ${isOpen ? 'flex' : 'hidden'}`}>
                         <div className='text-gray-900'>
-                            <h3 className='text-sm'>
+                            <h3 className='text-xs'>
                                 Darren Timotius
                             </h3>
                             <p className='text-xs'>
@@ -107,27 +101,24 @@ function Navbar() {
                         <div className='grid grid-cols-2 md:grid-cols-1 text-gray-900 text-xs'>
                             <div>
                                 <a className='p-0 m-0 w-fit block' href="/projects">
-                                    → Projects
+                                    <span style={{fontFamily: 'system-ui'}}>→</span> Projects
                                 </a>
                                 <a className='p-0 m-0 w-fit block' href="/about">
-                                    → About me
-                                </a>
-                                <a className='p-0 m-0 w-fit block' href="/now">
-                                    → Now
+                                    <span style={{fontFamily: 'system-ui'}}>→</span> About me
                                 </a>
                                 <a className='p-0 m-0 w-fit block' href="mailto:me@darrentimotius.me">
-                                    → Contact
+                                    <span style={{fontFamily: 'system-ui'}}>→</span> Contact
                                 </a>
                             </div>
                             <div>
                                 <a className='p-0 m-0 w-fit block' target='_blank' rel='noopener noreferrer' href="https://www.instagram.com/darrentimotius">
-                                    ↗ Instagram
+                                    <span style={{fontFamily: 'system-ui'}}>↗</span> Instagram
                                 </a>
                                 <a className='p-0 m-0 w-fit block' target='_blank' rel='noopener noreferrer' href="https://github.com/darrentimotius">
-                                    ↗ Github
+                                    <span style={{fontFamily: 'system-ui'}}>↗</span> Github
                                 </a>
                                 <a className='p-0 m-0 w-fit block' target='_blank' rel='noopener noreferrer' href="https://www.linkedin.com/in/darrentimotius/">
-                                    ↗ LinkedIn
+                                    <span style={{fontFamily: 'system-ui'}}>↗</span> LinkedIn
                                 </a>
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import { LayoutGroup, motion } from "framer-motion"
 import Card from './Card'
 

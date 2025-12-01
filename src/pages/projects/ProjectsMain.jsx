@@ -3,9 +3,16 @@ import Navbar from '../../components/Navbar'
 import { motion, LayoutGroup } from 'framer-motion'
 import Card from '../../components/Card'
 
+let isFirstLoad = true;
+
 const ProjectsMain = () => {
+    const navigationEntries = window.performance.getEntriesByType('navigation');
+    const isReload = navigationEntries.length > 0 && navigationEntries[0].type === 'reload';
+    const shouldAnimate = !isReload || !isFirstLoad;
+
     useEffect(() => {
-        document.title = 'Darren Timotius - Projects'
+        document.title = 'Darren Timotius - Projects';
+        isFirstLoad = false;
     }, [])
 
     const [isOpen, setIsOpen] = useState(false)
@@ -28,7 +35,7 @@ const ProjectsMain = () => {
     return (
         <div>
             <Navbar/>
-            <motion.div initial={{opacity: 0, y: 50 }} animate={{opacity: 1 ,y: 0 }} transition={{ duration: 0.5 }} className='min-h-screen flex flex-col'>
+            <motion.div initial={shouldAnimate ? {opacity: 0, y: 50 } : false } animate={{opacity: 1 ,y: 0 }} transition={{ duration: 0.5 }} className='min-h-screen flex flex-col'>
                 <div className='ml-0 md:ml-[340px] pl-8 pr-8 md:pl-0 relative flex-1 grow-0 pb-8 md:pb-14'>
                     <div className='flex flex-col gap-6 mt-32 md:mt-10 mb-24'>
                         <div className='flex flex-row items-end md:items-center justify-center mb-2 gap-4'>

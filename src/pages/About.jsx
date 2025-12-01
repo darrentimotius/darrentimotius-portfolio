@@ -2,15 +2,22 @@ import React, { useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import { motion } from 'framer-motion'
 
+let isFirstLoad = true;
+
 const About = () => {
+    const navigationEntries = window.performance.getEntriesByType('navigation');
+    const isReload = navigationEntries.length > 0 && navigationEntries[0].type === 'reload';
+    const shouldAnimate = !isReload || !isFirstLoad;
+
     useEffect(() => {
-        document.title = 'Darren Timotius - About Me'
+        document.title = 'Darren Timotius - About Me';
+        isFirstLoad = false;
         }, [])
 
     return (
         <div>
             <Navbar/>
-            <motion.div initial={{opacity: 0, y: 50 }} animate={{opacity: 1 ,y: 0 }} transition={{ duration: 0.5 }} viewport={{once: true}} className='min-h-screen flex flex-col'>
+            <motion.div initial={shouldAnimate ? { opacity: 0, y: 50 } : false} animate={{opacity: 1 ,y: 0 }} transition={{ duration: 0.5 }} className='min-h-screen flex flex-col'>
                 <div className='ml-0 md:ml-[340px] pl-8 pr-8 md:pl-0 relative flex-1 grow-0 pb-8 md:pb-14'>
                     <div className='max-w-lg flex flex-col'>
                         <div className='flex flex-col gap-6 mt-32 md:mt-10 mb-24'>
