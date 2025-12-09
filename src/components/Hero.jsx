@@ -24,7 +24,7 @@ const Hero = () => {
         <div className='ml-0 md:ml-[340px] pl-8 pr-8 md:pl-0 relative flex-1 grow-0 pb-8 md:pb-14'>
             <div className='flex flex-col'>
                 <h1 className='leading-6 max-w-md mt-32 md:mt-24 mb-4 text-sm'>
-                    Hi, my name is Darren Timotius. I am a computer science student and BCA Scholarship Awardee (Batch 21) living in Bogor. I enjoy to listening to music, playing guitar, and exploring video games.
+                    Hi, my name is Darren Timotius Raphael. I am a computer science student and BCA Scholarship Awardee (Batch 21) living in Bogor. I enjoy to listening to music, playing guitar, and exploring video games.
                 </h1>
 
                 <small className='flex-1 grow-0 p-0 m-0 text-[rgb(173,173,173)] text-[11px] max-w-sm mb-12 md:mb-20'>
