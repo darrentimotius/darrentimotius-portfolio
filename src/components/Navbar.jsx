@@ -61,7 +61,7 @@ function Navbar() {
                 </nav>
                 <div className='absolute bottom-12 left-8 right-8 flex flex-col gap-8 text-xs'>
                     <span className='flex-1'>
-                        © 2025
+                        © 2026
                     </span>
                 </div>
             </div>

@@ -4,7 +4,7 @@ import React, { useMemo } from 'react'
 const Card = ({ layoutId,itemVariants, onImageLoad, isOpen, image, title, href, description, date }) => {
     const randomDelay = useMemo(() => Math.random() * 0.6, []);
     return (
-        <div className={`w-full flex flex-col lg:items-end gap-2 lg:gap-4 ${isOpen ? 'lg:flex-row' : ''} `} >
+        <div className={`w-full flex flex-col lg:items-end gap-2 ${isOpen ? 'lg:flex-row lg:gap-4' : ''} `} >
             <motion.div layoutId={layoutId} variants={itemVariants} custom={randomDelay} className={`flex flex-col gap-2 ${isOpen ? 'lg:w-auto' : ''} `}>
                 <a className={`cursor-pointer w-full h-auto overflow-hidden relative group rounded-lg ${isOpen ? '' : ''}`} href={href}>
                     <img src={image} alt="" className='w-full h-full object-cover relative overflow-hidden group-hover:scale-105' decoding='async' loading='eager' onLoad={onImageLoad}/>
