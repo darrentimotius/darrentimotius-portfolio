@@ -27,6 +27,9 @@ const Dana = () => {
                         <p className='flex-1 grow w-full text-sm leading-6 max-w-lg'>
                             I recommend checking out the full case study on <a target='_blank' href="https://medium.com/@syarifanaamaliaputri/ui-ux-case-study-redesign-aplikasi-dana-dbdd39128282" className='underline'>Medium</a> for a detailed overview of the redesign process, challenges faced, and solutions implemented.
                         </p>
+                        <p className='flex-1 grow w-full text-sm leading-6 max-w-lg'>
+                            Additionally, this project was featured by SOCS BINUS University, where I study. You can view the publication <a target='_blank' href="https://socs.binus.ac.id/2025/10/06/ui-ux-redesign-aplikasi-dana/" className='underline'>here</a>.
+                        </p>
                     </>
                 }
             />

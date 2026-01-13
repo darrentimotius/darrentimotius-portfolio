@@ -14,7 +14,7 @@ function Navbar() {
 
                 <div className='text-gray-900'>
                     <h3 className='text-xs'>
-                        Darren Timotius
+                        Darren Timotius Raphael
                     </h3>
                     <p className='text-xs'>
                         B. 2005 in Bandung. Based in Bogor
@@ -38,7 +38,7 @@ function Navbar() {
                             </a>
                         </li>
                         <li className='flex cursor-pointer'>
-                            <a href="mailto:me@darrentimotius.me">
+                            <a href="mailto:darren@darrentimotius.me">
                                 <span style={{fontFamily: 'system-ui'}}>→</span> Contact
                             </a>
                         </li>
@@ -87,7 +87,7 @@ function Navbar() {
                     <div className={`flex-col py-4 gap-4 overflow-y-auto ${isOpen ? 'flex' : 'hidden'}`}>
                         <div className='text-gray-900'>
                             <h3 className='text-xs'>
-                                Darren Timotius
+                                Darren Timotius Raphael
                             </h3>
                             <p className='text-xs'>
                                 B. 2005 in Bandung. Based in Bogor
@@ -106,7 +106,7 @@ function Navbar() {
                                 <a className='p-0 m-0 w-fit block' href="/about">
                                     <span style={{fontFamily: 'system-ui'}}>→</span> About me
                                 </a>
-                                <a className='p-0 m-0 w-fit block' href="mailto:me@darrentimotius.me">
+                                <a className='p-0 m-0 w-fit block' href="mailto:darren@darrentimotius.me">
                                     <span style={{fontFamily: 'system-ui'}}>→</span> Contact
                                 </a>
                             </div>
