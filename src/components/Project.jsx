@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 let isFirstLoad = true;
 
-const Project = ({title, publish_date, roles, link, content}) => {
+const Project = ({title, publish_date, roles, links = [], content}) => {
     const navigationEntries = window.performance.getEntriesByType('navigation');
     const isReload = navigationEntries.length > 0 && navigationEntries[0].type === 'reload';
     const shouldAnimate = !isReload || !isFirstLoad;
@@ -45,9 +45,20 @@ const Project = ({title, publish_date, roles, link, content}) => {
                             </div>
                             <div className='flex-1 text-[11px]'>
                                 <small className='text-[rgb(173,173,173)] block mb-1 text-[11px]'>
-                                    Link
+                                    Links
                                 </small>
-                                <a href={link} target='_blank' className='block underline w-fit'>Visit Site</a>
+
+                                <div className='flex flex-row gap-1'>
+                                    {links.map((item, index) => (
+                                        <div key={index} className='flex flex-row'>
+                                            <a key={index} href={item.url} target='_blank' className='block underline w-fit'>
+                                                {item.label}
+                                            </a>
+
+                                            {index !== links.length - 1 && <span>,</span> }
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
 

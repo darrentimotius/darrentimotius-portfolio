@@ -8,7 +8,10 @@ const Dana = () => {
                 title='DANA'
                 publish_date='May 10, 2025'
                 roles='Project Leader, UI/UX Designer'
-                link='https://medium.com/@syarifanaamaliaputri/ui-ux-case-study-redesign-aplikasi-dana-dbdd39128282'
+                links={[
+                    { label: 'Medium', url: 'https://medium.com/@syarifanaamaliaputri/ui-ux-case-study-redesign-aplikasi-dana-dbdd39128282' },
+                    { label: 'SOCS BINUS', url: 'https://socs.binus.ac.id/2025/10/06/ui-ux-redesign-aplikasi-dana' },
+                ]}
                 content={
                     <>
                         <p className='flex-1 grow w-full text-sm leading-6 max-w-lg'>
@@ -28,7 +31,7 @@ const Dana = () => {
                             I recommend checking out the full case study on <a target='_blank' href="https://medium.com/@syarifanaamaliaputri/ui-ux-case-study-redesign-aplikasi-dana-dbdd39128282" className='underline'>Medium</a> for a detailed overview of the redesign process, challenges faced, and solutions implemented.
                         </p>
                         <p className='flex-1 grow w-full text-sm leading-6 max-w-lg'>
-                            Additionally, this project was featured by SOCS BINUS University, where I study. You can view the publication <a target='_blank' href="https://socs.binus.ac.id/2025/10/06/ui-ux-redesign-aplikasi-dana/" className='underline'>here</a>.
+                            Additionally, this project was featured by <a target='_blank' href="https://socs.binus.ac.id/2025/10/06/ui-ux-redesign-aplikasi-dana/" className='underline'>SOCS BINUS University</a>, where I study.
                         </p>
                     </>
                 }

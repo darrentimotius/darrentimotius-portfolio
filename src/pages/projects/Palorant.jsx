@@ -8,7 +8,9 @@ const Palorant = () => {
                 title='PALORANT'
                 publish_date='April 18, 2025'
                 roles='UI/UX Designer, Frontend Web Developer'
-                link='https://www.palorant.site/'
+                links={[
+                    { label: 'Visit Site', url: 'https://www.palorant.site' }
+                ]}
                 content={
                     <>
                         <p className='flex-1 grow w-full text-sm leading-6 max-w-lg'>

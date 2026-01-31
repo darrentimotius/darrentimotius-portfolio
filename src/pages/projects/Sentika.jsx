@@ -8,7 +8,9 @@ const Sentika = () => {
                 title='Sentika'
                 publish_date='September 23, 2025'
                 roles='Machine Learning Engineer, FullStack Web Developer'
-                link='https://www.sentika.site/'
+                links={[
+                    { label: 'Visit Site', url: 'https://www.sentika.site'}
+                ]}
                 content={
                     <>
                         <p className='flex-1 grow w-full text-sm leading-6 max-w-lg'>
