@@ -9,7 +9,7 @@ const Palorant = () => {
                 publish_date='April 18, 2025'
                 roles='UI/UX Designer, Frontend Web Developer'
                 links={[
-                    { label: 'Visit Site', url: 'https://www.palorant.site' }
+                    { label: 'Visit Site', url: 'https://palorant.darrentimotius.tech' }
                 ]}
                 content={
                     <>
