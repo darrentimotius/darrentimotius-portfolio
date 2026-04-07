@@ -17,7 +17,7 @@ const Hero = () => {
         })
     };
     const [loadedImages, setLoadedImages] = useState(0);
-    const totalImages = 3;
+    const totalImages = 5;
     const allLoaded = loadedImages === totalImages;
 
     return (
@@ -77,6 +77,28 @@ const Hero = () => {
                                 itemVariants={itemVariant}
                                 onImageLoad={() => setLoadedImages(c => c + 1)}
                                 isOpen={isOpen}
+                                image='/photos/zapp/zapp-card.jpg'
+                                title='ZAPP!'
+                                href='/projects/zapp'
+                                description='Mobile application designed to analyze household electricity usage.'
+                                date='February 26, 2026'
+                            />
+                            <Card
+                                layoutId='card-2'
+                                itemVariants={itemVariant}
+                                onImageLoad={() => setLoadedImages(c => c + 1)}
+                                isOpen={isOpen}
+                                image='/photos/kitawaras/kitawaras-card.jpg'
+                                title='Kita Waras'
+                                href='/projects/kitawaras'
+                                description='A web application powered by XGBoost to predict and analyze mental health conditions.'
+                                date='February 18, 2026'
+                            />
+                            <Card
+                                layoutId='card-3'
+                                itemVariants={itemVariant}
+                                onImageLoad={() => setLoadedImages(c => c + 1)}
+                                isOpen={isOpen}
                                 image='/photos/sentika/sentika-card.jpg'
                                 title='Sentika'
                                 href='/projects/sentika'
@@ -84,7 +106,7 @@ const Hero = () => {
                                 date='September 23, 2025'
                             />
                             <Card
-                                layoutId='card-2'
+                                layoutId='card-4'
                                 itemVariants={itemVariant}
                                 onImageLoad={() => setLoadedImages(c => c + 1)}
                                 isOpen={isOpen}
@@ -95,7 +117,7 @@ const Hero = () => {
                                 date='May 10, 2025'
                             />
                             <Card
-                                layoutId='card-3'
+                                layoutId='card-5'
                                 itemVariants={itemVariant}
                                 onImageLoad={() => setLoadedImages(c => c + 1)}
                                 isOpen={isOpen}

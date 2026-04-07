@@ -9,7 +9,7 @@ const Sentika = () => {
                 publish_date='September 23, 2025'
                 roles='Machine Learning Engineer, FullStack Web Developer'
                 links={[
-                    { label: 'Visit Site', url: 'https://www.sentika.site'}
+                    { label: 'Visit Site', url: 'https://www.sentika.site'}, { label: 'GitHub', url: 'https://github.com/darrentimotius/sentika' }
                 ]}
                 content={
                     <>

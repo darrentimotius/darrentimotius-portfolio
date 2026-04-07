@@ -16,6 +16,16 @@
 	<priority>1.0</priority>
 </url>
 <url>
+	<loc>https://darrentimotius.me/projects/zapp</loc>
+	<changefreq>weekly</changefreq>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://darrentimotius.me/projects/kitawaras</loc>
+	<changefreq>weekly</changefreq>
+	<priority>0.8</priority>
+</url>
+<url>
 	<loc>https://darrentimotius.me/projects/sentika</loc>
 	<changefreq>weekly</changefreq>
 	<priority>0.8</priority>

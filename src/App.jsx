@@ -6,6 +6,8 @@ import About from './pages/About'
 import Palorant from './pages/projects/Palorant'
 import Sentika from './pages/projects/Sentika'
 import Dana from './pages/projects/Dana'
+import Zapp from './pages/projects/Zapp'
+import Kitawaras from './pages/projects/Kitawaras'
 
 const App = () => {
     return (
@@ -17,6 +19,8 @@ const App = () => {
                 <Route path='/projects/palorant' element={<Palorant/>} />
                 <Route path='/projects/sentika' element={<Sentika/>}/>
                 <Route path='/projects/dana' element={<Dana/>}/>
+                <Route path='/projects/zapp' element={<Zapp/>}/>
+                <Route path='/projects/kitawaras' element={<Kitawaras/>}/>
             </Routes>
         </Router>
     )
