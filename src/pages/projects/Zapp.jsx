@@ -31,6 +31,16 @@ const Zapp = () => {
                     </p>
                     <div className="grid grid-cols-3 w-full gap-8">
                         <img src="/photos/zapp/zapp-welcome.png" alt="" className="" />
+                        <img src="/photos/zapp/zapp-login.png" alt="" className="" />
+                        <img src="/photos/zapp/zapp-register.png" alt="" className="" />
+                    </div>
+                    <div className="grid grid-cols-3 w-full gap-8">
+                        <img src="/photos/zapp/zapp-otp.png" alt="" className="" />
+                        <img src="/photos/zapp/zapp-create_account.png" alt="" className="" />
+                        <img src="/photos/zapp/zapp-forgot_password.png" alt="" className="" />
+                    </div>
+                    <div className="grid grid-cols-3 w-full gap-8">
+                        <img src="/photos/zapp/zapp-new_password.png" alt="" className="" />
                         <img src="/photos/zapp/zapp-homepage.png" alt="" className="" />
                         <img src="/photos/zapp/zapp-simulation.png" alt="" className="" />
                     </div>
